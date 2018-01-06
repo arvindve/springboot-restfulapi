@@ -46,6 +46,7 @@ public class UserController {
 
     @DeleteMapping("/users/{id}")
     public void deleteById(@PathVariable Integer id) {
+        System.out.println("Going to delete by id");
         userService.deleteUserById(id);
     }
 

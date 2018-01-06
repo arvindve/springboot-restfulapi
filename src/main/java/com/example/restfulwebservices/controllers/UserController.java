@@ -54,7 +54,7 @@ public class UserController {
     public Resource<User> createUser(@RequestBody User user) {
 
         userService.createUser(user);
-
+        System.out.println("###");
         Resource<User> resource = new Resource<User>(user);
         ControllerLinkBuilder linkTo = linkTo(methodOn(this.getClass()).getUserById(user.getId()));
         resource.add(linkTo.withRel("get-user"));
